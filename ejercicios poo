@@ -1,0 +1,28 @@
+class Libro:
+    def __init__(self, titulo, autor, numero_paginas):
+        self.titulo = titulo
+        self.autor = autor
+        self.numero_paginas = numero_paginas
+
+    def mostrar_informacion(self):
+        print("Título:", self.titulo)
+        print("Autor:", self.autor)
+        print("Número de páginas:", self.numero_paginas)
+
+    def actualizar_paginas(self, nuevo_numero_paginas):
+        if nuevo_numero_paginas > 0:
+            self.numero_paginas = nuevo_numero_paginas
+            print("El número de páginas ha sido actualizado correctamente.")
+        else:
+            print("El número de páginas debe ser mayor que 0.")
+
+
+# Ejemplo de uso
+libro1 = Libro("Las 48 leyes del poder ", "Robert Greene", 200)
+
+libro1.mostrar_informacion()
+
+print("\nActualizando número de páginas...\n")
+libro1.actualizar_paginas(203)
+
+libro1.mostrar_informacion()
