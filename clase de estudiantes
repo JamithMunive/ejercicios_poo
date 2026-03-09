@@ -1,0 +1,14 @@
+class Estudiante:
+    def __init__(self, nombre, edad, calificacion):
+        self.nombre = nombre
+        self.edad = edad
+        self.calificacion = calificacion
+
+    def verificar_aprobacion(self):
+        if self.calificacion >= 3.0: # Suponiendo que se pasa con 3.0
+            return f"{self.nombre} ha APROBADO."
+        else:
+            return f"{self.nombre} ha REPROBADO."
+
+estudiante1 = Estudiante("Andrés", 20, 4.5)
+print(estudiante1.verificar_aprobacion())
