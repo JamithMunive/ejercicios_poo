@@ -1,0 +1,33 @@
+saldo = 0
+
+while True:
+    print("Cuenta Bancaria")
+    print("1. Depositar")
+    print("2. Retirar")
+    print("3. Consultar saldo")
+    print("4. Salir")
+
+    opcion = input("Elige una opción: ")
+
+    if opcion == "1":
+        cantidad = float(input("Cantidad a depositar: "))
+        saldo = saldo + cantidad
+        print("Depósito realizado.")
+
+    elif opcion == "2":
+        cantidad = float(input("Cantidad a retirar: "))
+        if cantidad <= saldo:
+            saldo = saldo - cantidad
+            print("Retiro realizado.")
+        else:
+            print("No tienes suficiente saldo.")
+
+    elif opcion == "3":
+        print("Tu saldo actual es:", saldo)
+
+    elif opcion == "4":
+        print("Adiós.")
+        break
+
+    else:
+        print("Opción inválida.")
