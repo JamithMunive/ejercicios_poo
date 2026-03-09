@@ -1,0 +1,29 @@
+class Producto:
+    def __init__(self, nombre, precio, stock):
+        self.nombre = nombre
+        self.precio = precio
+        self.stock = stock
+
+    def verificar_disponibilidad(self, cantidad):
+        return self.stock >= cantidad
+
+    def vender(self, cantidad):
+        if self.verificar_disponibilidad(cantidad):
+            self.stock -= cantidad
+            print(f"Venta realizada: {cantidad} unidades.")
+        else:
+            print("Falta de stock.")
+
+    def reabastecer(self, cantidad):
+        self.stock += cantidad
+        print(f"Reabastecido: {cantidad} unidades. Total: {self.stock}")
+
+laptop = Producto("Laptop", 1200, 10)
+
+print(laptop.verificar_disponibilidad(5))  
+laptop.vender(3)                          
+print(laptop.verificar_disponibilidad(8))  
+laptop.vender(8)                          
+laptop.reabastecer(10)                     
+print(laptop.verificar_disponibilidad(8))  
+laptop.vender(8)                          
