@@ -1,0 +1,26 @@
+class Persona:
+    def __init__(self, nombre, edad, nacionalidad):
+        self.nombre = nombre
+        self.edad = edad
+        self.nacionalidad = nacionalidad
+
+    def saludar(self):
+        print("Hola, ¿como estas?")
+
+
+class Empleado(Persona):
+    pass
+
+
+pepito = Empleado("Pepito", 35, "colombiano")
+juan = Persona("juan", 32, "tangamandapiano")
+
+print(pepito.nombre)
+print(pepito.edad)
+print(pepito.nacionalidad)
+
+pepito.saludar()
+
+print(juan.nombre)
+print(juan.edad)
+print(juan.nacionalidad)
